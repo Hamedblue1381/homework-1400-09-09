@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title></title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+    #btndate{
+        background-color: cyan;
+        transition: all ease 0.5s;
+        position: fixed;
+        text-align: center;
+    }
+    #btndate:hover{
+        border-radius: 20px;
+        background-color: crimson;
+    }
+    #homework {
+        margin: 0 auto;
+        display: flex;
+        justify-content: center;
+    }
+</style>
+
+</head>
+
+<body>
+<p id="p1" style="text-align: left">این یک ماشین است</p>
+<div id="homework">
+
+    <img id="pic1" src="img/car.jpg" alt="car pic" style="height: 200px; height: 200px; left: 60%">
+    <br>
+    <button type="button" onclick="Valuechange()" id="btndate">try me!</button>
+    <script>
+        var img = document.getElementById("pic1");
+        var stat = true;
+
+        function Valuechange() {
+            if (!stat) {
+                img.src = "img/car.jpg";
+                stat = true;
+                console.log("Car pic");
+                document.getElementById("p1").innerHTML="این یک ماشین است";
+            } else {
+                img.src = "img/Motor.jpg";
+                stat = false;
+                console.log("Motor pic");
+                document.getElementById("p1").innerHTML="این یک موتور است";
+            }
+        }
+    </script>
+</div>
+</body>
+
+</html>
